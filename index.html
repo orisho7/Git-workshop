@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDG Git Workshop Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+      <div class="logo-container">
+        <div class="dot blue"></div>
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+      </div>
+      <h1>GDG on Campus</h1>
+      <p
+        class="subtitle"
+        style="
+          font-size: 1.5rem;
+          margin-top: -10px;
+          margin-bottom: 20px;
+          font-weight: 600;
+        "
+      >
+        Mustaqbal University
+      </p>
+      <p class="subtitle">
+        Welcome to the Git Workshop! Clone this project, add your favorite photo
+        to the gallery, and push it back to GitHub to join our collection.
+      </p>
+    </header>
+
+    <main class="gallery-container">
+      <div class="gallery-grid" id="gallery">
+        <!-- STUDENT CARDS START HERE -->
+
+        <!-- Example Card (Replace with your own!) -->
+        <div class="photo-card">
+          <div class="photo-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000"
+              alt="Workshop Example"
+            />
+          </div>
+          <div class="card-info">
+            <h3 class="student-name">GDG Team</h3>
+            <p class="photo-title">First Workshop Photo</p>
+          </div>
+        </div>
+
+        <!-- Add your card below this line -->
+      </div>
+
+      <section class="instructions">
+        <h2>🚀 How to Contribute</h2>
+        <p>1. <strong>Clone</strong> the repository to your local machine.</p>
+        <p>
+          2. Create a new <strong>branch</strong> with your name:
+          <code>git checkout -b your-name</code>
+        </p>
+        <p>3. Add your favorite image to the <code>images/</code> folder.</p>
+        <p>
+          4. Open <code>index.html</code> and copy-paste the example card block.
+        </p>
+        <p>
+          5. Update the <code>src</code>, <code>h3</code>, and
+          <code>p</code> tags with your data.
+        </p>
+        <p>
+          6. <strong>Add</strong>, <strong>Commit</strong>, and
+          <strong>Push</strong> your changes!
+        </p>
+      </section>
+    </main>
+
+    <footer
+      style="text-align: center; padding: 40px; color: #555; font-size: 0.8rem"
+    >
+      &copy; 2026 GDG on Campus Mustaqbal University • Built with &hearts; for
+      the Git Workshop
+    </footer>
+  </body>
+</html>

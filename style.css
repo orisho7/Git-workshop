@@ -1,0 +1,193 @@
+:root {
+  --gdg-blue: #4285f4;
+  --gdg-red: #ea4335;
+  --gdg-yellow: #fbbc04;
+  --gdg-green: #34a853;
+  --dark-bg: #0f111a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background elements */
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, var(--gdg-blue), var(--gdg-red));
+  filter: blur(150px);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.blob-1 {
+  top: -100px;
+  left: -100px;
+}
+.blob-2 {
+  bottom: -100px;
+  right: -100px;
+  background: linear-gradient(135deg, var(--gdg-yellow), var(--gdg-green));
+}
+
+/* Hero Section */
+header {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(66, 133, 244, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.dot.blue {
+  background-color: var(--gdg-blue);
+}
+.dot.red {
+  background-color: var(--gdg-red);
+}
+.dot.yellow {
+  background-color: var(--gdg-yellow);
+}
+.dot.green {
+  background-color: var(--gdg-green);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #ffffff, #a5a5a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #a5a5a5;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Gallery Section */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Photo Card */
+.photo-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.photo-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #1a1c29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.student-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.photo-title {
+  font-size: 0.9rem;
+  color: #a5a5a5;
+}
+
+/* Footer Instructions for Git */
+.instructions {
+  margin-top: 80px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--glass-border);
+  border-radius: 20px;
+  text-align: left;
+}
+
+.instructions h2 {
+  margin-bottom: 20px;
+  color: var(--gdg-blue);
+}
+
+.instructions code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--gdg-yellow);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
